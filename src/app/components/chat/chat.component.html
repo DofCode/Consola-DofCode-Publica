@@ -1,0 +1,39 @@
+<div class="_f_x_gg_df_master _d_x_f" *ngIf="(proyecto_data | async)?.created_at">
+  <div *ngIf="(proyecto_data_status | async)?.dispatched" class="x_f_c_contenedor_chat">
+    <div class="_d_x___ff_gh_">
+        <div class="_gr_z__d_">
+            <div class="_img_dof _xg__ta_">
+              <div class="img_off_dof"></div>
+              <img src="assets/img/_xv_sd_ds_g.png">
+            </div>
+            <div class="_d_fx_g">
+              <span class="x_fg_h truncate no_select">Equipo de DofCode</span>
+            </div>
+        </div>
+        <div class="_dfg__gh_f" id="chaa_">
+
+          <div class="_mensaje_chat no_select">
+            <span>Iniciar una conversación con DofCode</span>
+          </div>
+
+          <div class="_burbuja_1">
+            <p class="_d_x_sd">Chat<span class="_sd_sd no_select">11:15 pm</span></p>
+          </div>
+
+          <div class="_burbuja_2">
+            <p class="_d_x_sd">Key_database: {{ (proyecto_data | async)?.$key }}<span class="_sd_sd no_select">11:15 pm</span></p>
+          </div>
+
+        </div>
+        <div class="_f__dsd_hg_">
+          <input type="text" class="" placeholder="Escribe un mensaje aquí...">
+            <div class="_x_g__icons_">
+                <button type="button" class="__fg_fbtn_enviar"><i class="icon-dofcode_send"></i></button>
+            </div>
+        </div>
+
+
+    </div>
+
+</div>
+</div>

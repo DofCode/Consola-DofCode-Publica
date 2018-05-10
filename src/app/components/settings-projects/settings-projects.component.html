@@ -1,0 +1,7 @@
+<div class="_f_x_gg_df_master" *ngIf="(proyecto_data | async)?.created_at">
+  <div *ngIf="(proyecto_data_status | async)?.dispatched">
+    <p>
+      Configuración <br><strong>Key_database:</strong> {{ (proyecto_data | async)?.$key }}
+    </p>
+</div>
+</div>

@@ -1,0 +1,82 @@
+<div class="_zdg_x_fh_c">
+  <div class="_sd_xg_fc">
+    <div class="_s_df_fd" >
+      <div class="__d_x_d" *ngIf="isLoggedIn">
+        <h1  class="truncate _df_x_g_h1">Hola, <span>{{user_displayName}}</span></h1>
+        <p class="_df_2_d_p">Te damos la bienvenida a la consola de DofCode, crea tu proyecto o hazle seguimiento a proyectos en curso, nosotros nos encargamos del resto.</p>
+        <a [routerLink]="['/help']" class="_dgsd_xf"><i class="icon-dofcode_info"></i> Mas información</a>
+      </div>
+
+    </div>
+    <div class="_dg_xzf_g">
+      <div class="_d_xg_fd"></div>
+        <img src="assets/img/sz_dff_asx_.gif" alt="">
+    </div>
+  </div>
+</div>
+<div class="_zf_g_xp">
+
+  <div class="z_dfg_xd">
+
+      <div class="_df_item_p">
+        <a href="#crear_proyecto"><div class="_g_cs_gg_">
+            <div class="_dg_xz_f_c">
+                <i class="icon-dofcode_add"></i>
+                <span>Crear un proyecto</span>
+            </div>
+        </div></a>
+      </div>
+
+      <div class="_df_item_p" *ngFor="let project of projects | async">
+        <a [routerLink]="['/p', project.$key]"><div class="_g_cs_gg_">
+            <div class="_f__cx_h_">
+                <div class="_img_dof _df_xzd">
+                  <div class="img_off_dof"></div>
+                  <img src="{{project.image}}">
+                </div>
+                <div class="_df_c__">
+                  <span class="truncate _sd_t_title">{{project.name}}</span>
+                  <span class="f_s_xf truncate">En proceso</span>
+                </div>
+            </div>
+        </div></a>
+      </div>
+
+  </div>
+</div>
+
+
+<div id="crear_proyecto" class="modal">
+  <form >
+      <div class="modal-content">
+          <div class="x_g_d">
+            <span >Crear un proyecto</span>
+          </div>
+          <div class="_df__df_df_">
+                <div class="_c_sa_f">
+                  <label for="nombre_proyecto">Nombre del proyecto</label>
+                  <input type="text" name="" value="" id="nombre_proyecto" placeholder="Nombre del proyecto">
+                  <div class="_df_g_error"><span></span></div>
+                </div>
+                <div class="_c_sa_f">
+                  <label for="tipo_proyecto">Tipo de proyecto</label>
+                  <select id="tipo_proyecto">
+                    <option disabled>Elige el tipo de proyecto</option>
+                    <option value="" selected>Desarrollo App</option>
+                    <option value="">Desarrollo web</option>
+                    <option value="">Desarrollo app, web</option>
+                    <option value="">SEO</option>
+                  </select>
+                  <div class="_df_g_error"><span></span></div>
+                </div>
+
+          </div>
+      </div>
+      <div class="modal-footer">
+        <div class="_f_xc__x_f">
+          <button type="button" class="xf_g_as_c" id="_d_f_close">Cancelar</button>
+          <button type="submit" class="_df_z_d" (click)="crearProyecto()">Crear proyecto</button>
+        </div>
+      </div>
+  </form>
+</div>

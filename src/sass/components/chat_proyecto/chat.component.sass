@@ -1,0 +1,169 @@
+@import "../variables_dof"
+._d_x_f
+  position: relative
+  width: 100%
+.x_f_c_contenedor_chat
+  position: fixed
+  height: calc(100% - 155px)
+  width: calc(100% - 646px)
+  left: 443px
+  background: #FFF
+  +box-shadow(0px 2px 2px 0px rgba(0, 0, 0, 0.14))
+  @media(max-width: $laptopL)
+    width: calc(100% - 390px)
+    left: 325px
+  @media(max-width: 1024px)
+    width: calc(100% - 296px)
+    left: 278px
+  @media(max-width: $tablet)
+    width: 100%
+    left: 0
+    height: calc(100% - 113px)
+  ._d_x___ff_gh_
+    position: relative
+    width: 100%
+    height: 100%
+    background: #FFF
+    //header chat
+    ._gr_z__d_
+      width: 100%
+      padding: 12px
+      //height: 56px
+      background: #FFF
+      border-bottom: 1px solid #eee
+      border-top: 1px solid #ececec
+      display: flex
+      align-items: center
+      @media(max-width: $tablet)
+        background: #3f62d2
+        border-bottom: 0
+        border-top: 0
+      @media(max-width: $tablet)
+          display: none
+      ._xg__ta_
+        $tama_xG_: 38px
+        width: $tama_xG_
+        height: $tama_xG_
+        min-width: $tama_xG_
+        background: #ebebeb
+      ._d_fx_g
+        min-width: 0
+        margin-left: 7px
+        color: #545454
+        font-size: 16px
+        @media(max-width: $tablet)
+          color: #FFF
+    //body chat
+    ._dfg__gh_f
+      width: 100%
+      height: calc(100% - 117px)
+      overflow-y: auto
+      overflow-x: hidden
+      background: #f7f7f7
+      padding: 0 12px
+      @media(max-width: $tabletL)
+        height: calc(100% - 119px)
+      @media(max-width: $tablet)
+          height: calc(100% - 57px)
+    //Estilo del scroll
+    ._dfg__gh_f::-webkit-scrollbar
+      width: 5px
+      background-color: #EBEBEB
+    ._dfg__gh_f::-webkit-scrollbar-thumb
+      background-color: #ccc
+    ._dfg__gh_f::-webkit-scrollbar-thumb:hover
+        background-color: #aaa
+    //
+    ._mensaje_chat
+      width: 100%
+      display: flex
+      justify-content: center
+      padding: 15px
+      > span
+          background: #fff6e7
+          +border-radius(6px)
+          +box-shadow(0 1px 1px rgba(0, 0, 0, 0.12))
+          padding: 4px 15px
+          font-size: 14px
+          color: #777
+          text-align: center
+    // chat burbujas
+    ._burbuja_1
+      padding: 10px 0
+      padding-right: 20%
+      > ._d_x_sd
+          position: relative
+          display: inline-block
+          background: #e6e6e6
+          padding: 10px 15px
+          padding-bottom: 6px
+          margin: 0
+          +border-radius(15px 15px 15px 5px)
+          color: #565656
+          font-size: 15px
+          @media(max-width: $movilL)
+            font-size: 14px
+          ._sd_sd
+            display: block
+            font-size: 12px
+    ._burbuja_2
+      padding: 10px 0
+      padding-left: 20%
+      text-align: right
+
+      > ._d_x_sd
+          position: relative
+          display: inline-block
+          background: #d8fcd8
+          padding: 10px 15px
+          padding-bottom: 6px
+          margin: 0
+          +border-radius(15px 15px 5px 15px)
+          color: #565656
+          font-size: 15px
+          text-align: right
+          @media(max-width: $movilL)
+            font-size: 14px
+          ._sd_sd
+            display: block
+            font-size: 12px
+    // footer: chat
+    ._f__dsd_hg_
+      display: flex
+      align-items: center
+      width: 100%
+      background: #FFF
+      border-top: 1px solid #eee
+      padding: 7px 12px
+      height: 54px
+      @media(max-width: $tabletL)
+        height: 57px
+      input
+        width: 100%
+        padding: 10px 20px
+        padding-left: 0
+        margin: 0
+        font-size: 15px
+        height: auto
+        outline: none
+        border: 0
+        background: #FFF
+        +border-radius(7px)
+        @media(max-width: $tabletL)
+          padding-top: 12px
+          padding-bottom: 12px
+        @media(max-width: $movilL)
+          padding: 10px 5px
+          padding-left: 0
+      ._x_g__icons_
+        margin-left: 12px
+        display: none
+        @media(max-width: $tabletL)
+          display: block
+        .__fg_fbtn_enviar
+          border: none
+          font-size: 22px
+          background: none
+          padding: 3px 5px
+          color: #828282
+          outline: none

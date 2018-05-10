@@ -1,0 +1,53 @@
+<div class="_f_x_gg_df_master" *ngIf="(proyecto_data | async)?.created_at">
+  <div *ngIf="(proyecto_data_status | async)?.dispatched; then despachado else noDespachado">
+
+  </div>
+  <ng-template #noDespachado>
+    <div class="_g_x_g_c_g_ca___">
+      <div class="_dg_d_g">
+        <span class="truncate">Datos del proyecto</span>
+      </div>
+    <div class="_xg_fg_qs">
+      <div class="_d_d_c_fd">
+          <div class="_f_x_g_s__1">
+            <label for="tipo_p" class="_labels_">Tipo de proyecto</label>
+            <select id="tipo_p" class="" name="" class="input_select">
+              <option disabled>Elige el tipo de proyecto</option>
+              <option value="" selected>Desarrollo App</option>
+              <option value="">Desarrollo web</option>
+              <option value="">Desarrollo app, web</option>
+              <option value="">SEO</option>
+            </select>
+          </div>
+          <div class="_f_x_g_s__2">
+              <label for="tipo_p" class="_labels_">ID del proyecto</label>
+              <input type="text" name="" value="{{ (proyecto_data | async)?.created_at }}" disabled class="input_select">
+          </div>
+      </div>
+      <div class="descrip_xg_ds">
+          <label for="tipo_p" class="_labels_">Descripción del proyecto</label>
+          <textarea name="name" class="_dg_x_d"></textarea>
+      </div>
+      <div class="_dfh_x__sd_archivo_">
+        <div class="_xg_sd_c">
+          <span class="xdg_xg_sd truncate">Enviar un archivo</span>
+          <p class="__sd_parrafo">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</p>
+        </div>
+        <div class="_g_cx_fh_">
+          <input type="file" name="" value="">
+        </div>
+      </div>
+      <div class="_dg_x_btn_enviar">
+
+        <button type="button" name="" class="_f_s_d_enviar" disabled>Enviar solicitud</button>
+        <button type="button" name="button" class="tooltipped eliminar_sd_xg_" data-position="top" data-delay="50" data-tooltip="Eliminar este proyecto"><i class="icon-dofcode_delete"></i></button>
+      </div>
+    </div>
+    </div>
+  </ng-template>
+
+  <ng-template #despachado>
+    Este proyecto tiene status: <strong>Enviado</strong> o (dispatched: true) en la BD
+  </ng-template>
+
+</div>

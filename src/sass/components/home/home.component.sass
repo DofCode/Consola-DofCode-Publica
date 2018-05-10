@@ -1,0 +1,207 @@
+@import "../variables_dof"
+//cabezera
+
+._zdg_x_fh_c
+  width: 100%
+  height: 330px
+  background: #FFF
+  border-bottom: 1px solid #ddd
+  @media(max-width: $tabletL)
+    height: auto
+  ._sd_xg_fc
+    max-width: $maxw
+    width: calc(100% - 30px)
+    display: flex
+    align-items: center
+    overflow: hidden
+    max-height: 100%
+    margin: auto
+    @media(max-width: 1330px)
+      max-width: 900px
+    @media(max-width: 940px)
+      max-width: 595px
+    @media(max-width: 638px)
+      max-width: 100%
+    ._s_df_fd
+      width: 100%
+      padding: 40px 0
+      .__d_x_d
+        max-width: 440px
+        width: 100%
+        ._df_x_g_h1
+          font-size: 26px
+          margin: 0
+        ._df_2_d_p
+          color: $gris_claro
+        ._dgsd_xf
+          font-size: 14px
+          color: #008aed
+          @media(max-width: 618px)
+            font-size: 15px
+    ._dg_xzf_g
+      width: 100%
+      position: relative
+      overflow: hidden
+      display: flex
+      align-items: center
+      @media(max-width: 618px)
+        display: none
+      ._d_xg_fd
+        position: absolute
+        top: 0
+        z-index: 40
+        width: 100%
+        height: 100%
+      img
+        max-width: 100%
+//crear proyectos y proyectos
+._zf_g_xp
+  width: 100%
+  .z_dfg_xd
+    max-width: $maxw
+    padding-top: 20px
+    margin: auto
+    display: flex
+    justify-content: flex-start
+    flex-wrap: wrap
+    align-items: flex-start
+    @media(max-width: 1330px)
+      max-width: 900px
+    @media(max-width: 940px)
+      max-width: 595px
+    @media(max-width: 638px)
+      max-width: 95%
+    @media(max-width: $movilL)
+      max-width: 260px
+    ._df_item_p
+      margin-right: 20px
+      width: 304px
+      height: 220px
+      margin-bottom: 20px
+      @media(max-width: 1330px)
+        width: 286px
+      @media(max-width: 638px)
+        width: 47%
+      @media(max-width: $movilL)
+        width: 100%
+        margin-right: 0
+    ._g_cs_gg_
+      width: 100%
+      height: 100%
+      background: #FFF
+      +border-radius(3px)
+      +box-shadow(0px 2px 2px 0px rgba(0, 0, 0, 0.14))
+      position: relative
+    ._dg_xz_f_c
+      width: 100%
+      height: 100%
+      display: flex
+      justify-content: center
+      align-items: center
+      flex-direction: column
+      color: #7f909c
+      i
+        font-size: 28px
+      span
+        display: block
+        font-weight: 500
+        margin-top: 5px
+    ._df_item_p:nth-child(4n+4)
+      margin-right: 0
+      @media(max-width: 1330px)
+        margin-right: 20px
+      @media(max-width: $movilL)
+        margin-right: 0
+    ._df_item_p:nth-child(3n+3)
+      @media(max-width: 1330px)
+        margin-right: 0
+      @media(max-width: 940px)
+        margin-right: 20px
+      @media(max-width: $movilL)
+        margin-right: 0
+    ._df_item_p:nth-child(2n+2)
+      @media(max-width: 940px)
+        margin-right: 0
+//contenido proyecto item
+._f__cx_h_
+  display: flex
+  align-items: center
+  justify-content: center
+  width: 100%
+  height: 100%
+  flex-direction: column
+  padding: 15px
+  ._df_xzd
+    $img_dfsd: 70px
+    width: $img_dfsd
+    min-width: $img_dfsd
+    height: $img_dfsd
+._df_c__
+  width: 100%
+  font-size: 14px
+  text-align: center
+  margin-top: 15px
+  ._sd_t_title
+    font-size: 16px
+    color: #3c3c3c
+    display: block
+  .f_s_xf
+    color: $gris_claro
+    display: inline-block
+    margin-top: -2px
+//modal crear proyecto
+#crear_proyecto
+  max-width: 380px
+.x_g_d
+  font-size: 20px
+  margin-bottom: 20px
+  color: #000
+._c_sa_f
+  width: 100%
+  margin-bottom: 25px
+  input, select
+    width: 100%
+    padding: 8px 5px
+    outline: none
+    border: 1px solid #ccc
+  label
+    font-size: 13px
+    margin-bottom: 5px
+    display: block
+    color: #868686
+._df_g_error
+  position: relative
+  span
+    position: absolute
+    color: $error
+    font-size: 12px
+._f_xc__x_f
+  display: flex
+  justify-content: flex-end
+  button
+    padding: 7px 15px
+    border: none
+    font-weight: 500
+    text-transform: uppercase
+    display: block
+    white-space: nowrap
+    overflow: hidden
+    +border-radius(3px)
+    font-size: 14px
+    transition: .2s ease-out
+    letter-spacing: .5px
+    text-overflow: ellipsis
+    outline: none
+  .xf_g_as_c
+    background: none
+    color: #777
+  .xf_g_as_c:hover
+    background: #eee
+  ._df_z_d
+    margin-left: 15px
+    background: $azul
+    color: #FFF
+    +box-shadow(0px 2px 5px rgba(0, 0, 0, 0.13))
+  ._df_z_d:disabled
+    background: #ccc
+    +box-shadow(none)

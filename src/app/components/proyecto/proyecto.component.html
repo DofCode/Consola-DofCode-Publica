@@ -1,0 +1,23 @@
+<div class="_zf__sdg_sad" >
+  <div class="_zxd_df" *ngIf="(proyecto_data_status | async)?.dispatched">
+    <div class="_zf_sdd_xg">
+        <div class="_xf_zs_f _f_d_d">
+            <span><a [routerLink]="['/']" class="_f_df_b"><i class="icon-dofcode_arrow_left"></i></a></span>
+        </div>
+        <ul class="dfr_sdg_xc">
+          <li><a [routerLink]="['i']" routerLinkActive="active"><i class="left icon-dofcode_project"></i><span>Incio</span></a></li>
+          <li><a [routerLink]="['tracing']" routerLinkActive="active"><i class="left icon-dofcode_tracing"></i><span>Seguimiento</span></a></li>
+          <li><a [routerLink]="['chat']" routerLinkActive="active"><i class="left icon-dofcode_chat"></i><span>Chat</span></a></li>
+          <li><a [routerLink]="['settings']" routerLinkActive="active"><i class="left icon-dofcode_settings"></i><span>Configuración</span></a></li>
+        </ul>
+    </div>
+  </div>
+  <div class="sz__sfs_s">
+    <div class="_xf_zs_f _f_x_sd_" *ngIf="(proyecto_data | async)?.created_at">
+      <span class="truncate" >{{ (proyecto_data | async)?.name }}</span>
+    </div>
+    <div class="_zf_g_xsf_" >
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,33 @@
+@charset "UTF-8";
+
+// Mixins
+// @import "components/prefixer";
+@import "components/mixins";
+@import "components/color";
+
+// Variables;
+@import "components/variables";
+
+// Reset
+@import "components/normalize";
+
+// components
+@import "components/global";
+@import "components/roboto";
+@import "components/typography";
+@import "components/modal";
+@import "components/collapsible";
+@import "components/tooltip";
+@import "components/iconos_dofcode";
+
+//========================
+//components DofCode
+
+@import "components/global_dofcode";
+//@import "components/owl/_core";
+//@import "components/owl/_animate";
+//@import "components/owl/_autoheight";
+//@import "components/owl/lazyload";
+//@import "components/owl/_video";
+
+//  @import "components/owl/_theme.default";
